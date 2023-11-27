@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Sheets에 데이터 추가하기</title>
+</head>
+<body>
+  <form id="dataForm">
+    <input type="text" id="name" placeholder="이름"><br>
+    <input type="tel" id="phone" placeholder="전화번호"><br>
+    <input type="email" id="email" placeholder="이메일"><br>
+    <button type="submit">제출</button>
+  </form>
+
+  <script>
+    document.getElementById('dataForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+
+      const formData = {
+        'name': name,
+        'phone': phone,
+        'email': email
+      };
+
+      // 서버로 데이터를 전송하는 코드를 작성해야 합니다.
+      // 서버에서 Google Sheets API를 호출하여 데이터를 추가해야 합니다.
+      // 클라이언트에서 직접 Google Sheets에 데이터를 추가하는 것은 보안상 위험합니다.
+    });
+  </script>
+</body>
+</html>
